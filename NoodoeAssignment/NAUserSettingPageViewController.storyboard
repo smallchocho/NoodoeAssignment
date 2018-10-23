@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b53-jb-XE4">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Setting Page View Controller-->
+        <scene sceneID="nUZ-x0-P7N">
+            <objects>
+                <viewController storyboardIdentifier="NAUserSettingPageViewController" id="b53-jb-XE4" customClass="NAUserSettingPageViewController" customModule="NoodoeAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X5Z-yp-1AW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noodoe assignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cm2-XU-qfL">
+                                <rect key="frame" x="42" y="78.5" width="236.5" height="35"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oRG-xA-NER">
+                                <rect key="frame" x="32" y="153.5" width="256" height="166"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dGb-MV-DCi">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkh-bx-7yo">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
+                                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ysH-Ec-8Zg" userLabel="_">
+                                                <rect key="frame" x="128" y="0.0" width="128" height="50"/>
+                                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iPR-SH-eYu">
+                                        <rect key="frame" x="0.0" y="58" width="256" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk4-p6-17G">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
+                                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yvw-BZ-HY5" userLabel="_">
+                                                <rect key="frame" x="128" y="0.0" width="128" height="50"/>
+                                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g4N-iJ-EDZ">
+                                        <rect key="frame" x="0.0" y="116" width="256" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timezone：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNP-RI-ZEd">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
+                                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hLn-zC-jo1">
+                                                <rect key="frame" x="128" y="0.0" width="128" height="50"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pt-rM-TnE">
+                                <rect key="frame" x="96" y="360" width="128" height="48"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="25"/>
+                                <state key="normal" title="Comfirm">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickedConfirmButton:" destination="b53-jb-XE4" eventType="touchUpInside" id="far-c2-rRz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95461243391036987" green="0.87271207571029663" blue="0.08931858092546463" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oRG-xA-NER" firstAttribute="top" secondItem="cm2-XU-qfL" secondAttribute="bottom" constant="40" id="4JP-1v-tgB"/>
+                            <constraint firstItem="oRG-xA-NER" firstAttribute="centerX" secondItem="X5Z-yp-1AW" secondAttribute="centerX" id="Lwm-SI-doQ"/>
+                            <constraint firstItem="9Pt-rM-TnE" firstAttribute="centerY" secondItem="X5Z-yp-1AW" secondAttribute="centerY" multiplier="1.6" id="TLC-mo-ruJ"/>
+                            <constraint firstItem="oRG-xA-NER" firstAttribute="width" secondItem="X5Z-yp-1AW" secondAttribute="width" multiplier="0.8" id="bdE-ed-JwG"/>
+                            <constraint firstItem="cm2-XU-qfL" firstAttribute="centerX" secondItem="X5Z-yp-1AW" secondAttribute="centerX" id="c71-DD-fjh"/>
+                            <constraint firstItem="9Pt-rM-TnE" firstAttribute="height" secondItem="X5Z-yp-1AW" secondAttribute="height" multiplier="0.1" id="g5a-mW-CoH"/>
+                            <constraint firstItem="cm2-XU-qfL" firstAttribute="centerY" secondItem="X5Z-yp-1AW" secondAttribute="centerY" multiplier="0.4" id="iDn-Se-eZY"/>
+                            <constraint firstItem="9Pt-rM-TnE" firstAttribute="width" secondItem="X5Z-yp-1AW" secondAttribute="width" multiplier="0.4" id="jcR-b6-WOD"/>
+                            <constraint firstItem="9Pt-rM-TnE" firstAttribute="centerX" secondItem="X5Z-yp-1AW" secondAttribute="centerX" id="ry1-AL-djl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YWj-Jv-Xfd"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="yvw-BZ-HY5" id="3K9-hU-aA3"/>
+                        <outlet property="timezoneTextField" destination="hLn-zC-jo1" id="a39-XJ-meo"/>
+                        <outlet property="userNameLabel" destination="ysH-Ec-8Zg" id="mPe-Ud-FtZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YRu-JJ-2be" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="120.98950524737631"/>
+        </scene>
+    </scenes>
+</document>

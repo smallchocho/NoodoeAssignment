@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0898CD25217EEF0900DBE800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898CD24217EEF0900DBE800 /* AppDelegate.swift */; };
+		0898CD27217EEF0900DBE800 /* NALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898CD26217EEF0900DBE800 /* NALoginViewController.swift */; };
+		0898CD2A217EEF0900DBE800 /* NALoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0898CD28217EEF0900DBE800 /* NALoginViewController.storyboard */; };
+		0898CD2C217EEF0B00DBE800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0898CD2B217EEF0B00DBE800 /* Assets.xcassets */; };
+		0898CD2F217EEF0B00DBE800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0898CD2D217EEF0B00DBE800 /* LaunchScreen.storyboard */; };
+		0898CD37217EF1D600DBE800 /* NAUserSettingPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0898CD36217EF1D600DBE800 /* NAUserSettingPageViewController.storyboard */; };
+		0898CD39217EF1F400DBE800 /* NAUserSettingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898CD38217EF1F400DBE800 /* NAUserSettingPageViewController.swift */; };
+		0898CD3B217EFB0700DBE800 /* NABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898CD3A217EFB0700DBE800 /* NABaseViewController.swift */; };
+		0898CD3E217F00BB00DBE800 /* NANetworkMannager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898CD3D217F00BB00DBE800 /* NANetworkMannager.swift */; };
+		0898CD40217F12CC00DBE800 /* NAUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898CD3F217F12CC00DBE800 /* NAUserProfile.swift */; };
+		0C7679EC21CC2ECBD1757E63 /* Pods_NoodoeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2745CF29FFDDD7EA433AF4C /* Pods_NoodoeAssignment.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0898CD21217EEF0900DBE800 /* NoodoeAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoodoeAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0898CD24217EEF0900DBE800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0898CD26217EEF0900DBE800 /* NALoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NALoginViewController.swift; sourceTree = "<group>"; };
+		0898CD29217EEF0900DBE800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NALoginViewController.storyboard; sourceTree = "<group>"; };
+		0898CD2B217EEF0B00DBE800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0898CD2E217EEF0B00DBE800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0898CD30217EEF0B00DBE800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0898CD36217EF1D600DBE800 /* NAUserSettingPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NAUserSettingPageViewController.storyboard; sourceTree = "<group>"; };
+		0898CD38217EF1F400DBE800 /* NAUserSettingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAUserSettingPageViewController.swift; sourceTree = "<group>"; };
+		0898CD3A217EFB0700DBE800 /* NABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NABaseViewController.swift; sourceTree = "<group>"; };
+		0898CD3D217F00BB00DBE800 /* NANetworkMannager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NANetworkMannager.swift; sourceTree = "<group>"; };
+		0898CD3F217F12CC00DBE800 /* NAUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAUserProfile.swift; sourceTree = "<group>"; };
+		154BA23BC4FAE40E09BB207B /* Pods-NoodoeAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoodoeAssignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NoodoeAssignment/Pods-NoodoeAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		C2745CF29FFDDD7EA433AF4C /* Pods_NoodoeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoodoeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D38318C4A04CADB0893F7F9B /* Pods-NoodoeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoodoeAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-NoodoeAssignment/Pods-NoodoeAssignment.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0898CD1E217EEF0900DBE800 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C7679EC21CC2ECBD1757E63 /* Pods_NoodoeAssignment.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0898CD18217EEF0900DBE800 = {
+			isa = PBXGroup;
+			children = (
+				0898CD23217EEF0900DBE800 /* NoodoeAssignment */,
+				0898CD22217EEF0900DBE800 /* Products */,
+				A3922D7F29A8B199BC4C00A4 /* Pods */,
+				7CA2A9732396AB15D32DD94A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0898CD22217EEF0900DBE800 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0898CD21217EEF0900DBE800 /* NoodoeAssignment.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0898CD23217EEF0900DBE800 /* NoodoeAssignment */ = {
+			isa = PBXGroup;
+			children = (
+				0898CD24217EEF0900DBE800 /* AppDelegate.swift */,
+				0898CD3A217EFB0700DBE800 /* NABaseViewController.swift */,
+				0898CD28217EEF0900DBE800 /* NALoginViewController.storyboard */,
+				0898CD26217EEF0900DBE800 /* NALoginViewController.swift */,
+				0898CD36217EF1D600DBE800 /* NAUserSettingPageViewController.storyboard */,
+				0898CD38217EF1F400DBE800 /* NAUserSettingPageViewController.swift */,
+				0898CD2B217EEF0B00DBE800 /* Assets.xcassets */,
+				0898CD2D217EEF0B00DBE800 /* LaunchScreen.storyboard */,
+				0898CD30217EEF0B00DBE800 /* Info.plist */,
+				0898CD3C217F009900DBE800 /* NetworkLibray */,
+			);
+			path = NoodoeAssignment;
+			sourceTree = "<group>";
+		};
+		0898CD3C217F009900DBE800 /* NetworkLibray */ = {
+			isa = PBXGroup;
+			children = (
+				0898CD3D217F00BB00DBE800 /* NANetworkMannager.swift */,
+				0898CD3F217F12CC00DBE800 /* NAUserProfile.swift */,
+			);
+			path = NetworkLibray;
+			sourceTree = "<group>";
+		};
+		7CA2A9732396AB15D32DD94A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2745CF29FFDDD7EA433AF4C /* Pods_NoodoeAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3922D7F29A8B199BC4C00A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				154BA23BC4FAE40E09BB207B /* Pods-NoodoeAssignment.debug.xcconfig */,
+				D38318C4A04CADB0893F7F9B /* Pods-NoodoeAssignment.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0898CD20217EEF0900DBE800 /* NoodoeAssignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0898CD33217EEF0B00DBE800 /* Build configuration list for PBXNativeTarget "NoodoeAssignment" */;
+			buildPhases = (
+				9A924C12F65D8A93FFF7288B /* [CP] Check Pods Manifest.lock */,
+				0898CD1D217EEF0900DBE800 /* Sources */,
+				0898CD1E217EEF0900DBE800 /* Frameworks */,
+				0898CD1F217EEF0900DBE800 /* Resources */,
+				AB83679DAA4480946D94B5BC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoodoeAssignment;
+			productName = NoodoeAssignment;
+			productReference = 0898CD21217EEF0900DBE800 /* NoodoeAssignment.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0898CD19217EEF0900DBE800 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = seaFoodBon;
+				TargetAttributes = {
+					0898CD20217EEF0900DBE800 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 0898CD1C217EEF0900DBE800 /* Build configuration list for PBXProject "NoodoeAssignment" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0898CD18217EEF0900DBE800;
+			productRefGroup = 0898CD22217EEF0900DBE800 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0898CD20217EEF0900DBE800 /* NoodoeAssignment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0898CD1F217EEF0900DBE800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0898CD2F217EEF0B00DBE800 /* LaunchScreen.storyboard in Resources */,
+				0898CD37217EF1D600DBE800 /* NAUserSettingPageViewController.storyboard in Resources */,
+				0898CD2C217EEF0B00DBE800 /* Assets.xcassets in Resources */,
+				0898CD2A217EEF0900DBE800 /* NALoginViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A924C12F65D8A93FFF7288B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoodoeAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB83679DAA4480946D94B5BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NoodoeAssignment/Pods-NoodoeAssignment-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NoodoeAssignment/Pods-NoodoeAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0898CD1D217EEF0900DBE800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0898CD39217EF1F400DBE800 /* NAUserSettingPageViewController.swift in Sources */,
+				0898CD27217EEF0900DBE800 /* NALoginViewController.swift in Sources */,
+				0898CD3B217EFB0700DBE800 /* NABaseViewController.swift in Sources */,
+				0898CD40217F12CC00DBE800 /* NAUserProfile.swift in Sources */,
+				0898CD3E217F00BB00DBE800 /* NANetworkMannager.swift in Sources */,
+				0898CD25217EEF0900DBE800 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0898CD28217EEF0900DBE800 /* NALoginViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0898CD29217EEF0900DBE800 /* Base */,
+			);
+			name = NALoginViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		0898CD2D217EEF0B00DBE800 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0898CD2E217EEF0B00DBE800 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0898CD31217EEF0B00DBE800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0898CD32217EEF0B00DBE800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0898CD34217EEF0B00DBE800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 154BA23BC4FAE40E09BB207B /* Pods-NoodoeAssignment.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2GC9BV99WC;
+				INFOPLIST_FILE = NoodoeAssignment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = seaFoodBon.NoodoeAssignment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0898CD35217EEF0B00DBE800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D38318C4A04CADB0893F7F9B /* Pods-NoodoeAssignment.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2GC9BV99WC;
+				INFOPLIST_FILE = NoodoeAssignment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = seaFoodBon.NoodoeAssignment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0898CD1C217EEF0900DBE800 /* Build configuration list for PBXProject "NoodoeAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0898CD31217EEF0B00DBE800 /* Debug */,
+				0898CD32217EEF0B00DBE800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0898CD33217EEF0B00DBE800 /* Build configuration list for PBXNativeTarget "NoodoeAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0898CD34217EEF0B00DBE800 /* Debug */,
+				0898CD35217EEF0B00DBE800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0898CD19217EEF0900DBE800 /* Project object */;
+}
