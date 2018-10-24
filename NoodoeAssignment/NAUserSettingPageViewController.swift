@@ -34,8 +34,8 @@ class NAUserSettingPageViewController: NABaseViewController {
     }
     
     override func onBackButtonClicked() {
-        NANetworkMannager.SESSION_TOKEN = nil
-        NANetworkMannager.USER_OBJECT_ID = nil
+        NANetworkMannager.SESSION_TOKEN = ""
+        NANetworkMannager.USER_OBJECT_ID = ""
         super.onBackButtonClicked()
     }
     
@@ -43,9 +43,9 @@ class NAUserSettingPageViewController: NABaseViewController {
         startLoading()
         guard let timezoneString = self.timezoneTextField.text else{ return }
         guard let timezone = Int(timezoneString) else{ return }
-        guard let id = NANetworkMannager.USER_OBJECT_ID else{ return }
+        guard !NANetworkMannager.USER_OBJECT_ID.isEmpty else{ return }
         let parameters = [ "timezone": timezone ]
-        NANetworkMannager.request(method: .put, catogory: .users, command: id , parameters: parameters, reponseHandler: setUserProfileHandler)
+        NANetworkMannager.request(method: .put, catogory: .users, command: NANetworkMannager.USER_OBJECT_ID , parameters: parameters, reponseHandler: setUserProfileHandler)
     }
     private func setUserProfileHandler(isSuccess:Bool,result:Any){
         stopLoading()

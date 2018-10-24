@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noodoe assignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfD-mI-QKZ">
-                                <rect key="frame" x="69.5" y="116" width="236.5" height="35"/>
+                                <rect key="frame" x="69" y="116" width="237" height="35"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

@@ -15,8 +15,14 @@ class NANetworkMannager{
         case login = "login"
         case users = "users"
     }
-    static var USER_OBJECT_ID:String?
-    static var SESSION_TOKEN:String?
+    static var USER_OBJECT_ID:String{
+        get{ return NAUserDefaultManager.getString(forKey: .userObjectId)}
+        set{ NAUserDefaultManager.setString(forKey:.userObjectId , str: newValue)}
+    }
+    static var SESSION_TOKEN:String{
+        get{ return NAUserDefaultManager.getString(forKey: .sessionToken)}
+        set{ NAUserDefaultManager.setString(forKey:.sessionToken , str: newValue)}
+    }
     static let USER_NAME = "test2@qq.com"
     static let PASSWORD = "test1234qq"
     static let APPLICATION_ID = "vqYuKPOkLQLYHhk4QTGsGKFwATT4mBIGREI2m8eD"
@@ -37,8 +43,8 @@ class NANetworkMannager{
             "X-Parse-Application-Id": APPLICATION_ID,
             "X-Parse-REST-API-Key":REST_API_KEY
         ]
-        if let token = SESSION_TOKEN{
-            headers["X-Parse-Session-Token"] = token
+        if !SESSION_TOKEN.isEmpty {
+            headers["X-Parse-Session-Token"] = SESSION_TOKEN
         }
         
         alamofireMannager.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { response in

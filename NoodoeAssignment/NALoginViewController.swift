@@ -17,6 +17,7 @@ class NALoginViewController: NABaseViewController {
         self.isShowBackButton = false
         // Do any additional setup after loading the view, typically from a nib.
     }
+
     
     @IBAction func onClickedLoginButton(_ sender: UIButton) {
         self.sendLoginReguest()
@@ -39,9 +40,11 @@ class NALoginViewController: NABaseViewController {
                 assert(false)
                 return
             }
-            guard let userName = json["username"].string else{ return }
-            guard let email = json["email"].string else{ return }
-            guard let timezone = json["timezone"].int else{ return }
+            guard let userName = json["username"].string ,let email = json["email"].string ,let timezone = json["timezone"].int else{
+                let title = "失敗"
+                showMessage(title: title, message: "登入失敗，請稍後再試", handler: nil)
+                return
+            }
             let userProfile = NAUserProfile(userName: userName, email: email,timezone:timezone)
             print(userProfile)
             self.goToUserSettingViewController(profile: userProfile)
