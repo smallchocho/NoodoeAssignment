@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+//import SwiftyJSON
 class NALoginViewController: NABaseViewController {
 
     
@@ -36,11 +36,15 @@ class NALoginViewController: NABaseViewController {
         stopLoading()
         switch isSuccess {
         case true:
-            guard let json = result as? JSON else{
+//            guard let json = result as? JSON else{
+//                assert(false)
+//                return
+//            }
+            guard let json = result as? [String:Any] else{
                 assert(false)
                 return
             }
-            guard let userName = json["username"].string ,let email = json["email"].string ,let timezone = json["timezone"].int else{
+            guard let userName = json["username"] as? String ,let email = json["email"] as? String ,let timezone = json["timezone"] as? Int else{
                 let title = "失敗"
                 showMessage(title: title, message: "登入失敗，請稍後再試", handler: nil)
                 return

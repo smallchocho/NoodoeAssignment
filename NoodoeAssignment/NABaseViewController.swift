@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import JGProgressHUD
 class NABaseViewController:UIViewController{
     var isShowBackButton:Bool = true
-    var isLoading = false
-    let hud = JGProgressHUD(style: .dark)
+    var indicatorView = UIActivityIndicatorView(style: .whiteLarge)
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if isShowBackButton{ self.setBackButton() }
@@ -26,21 +24,22 @@ class NABaseViewController:UIViewController{
         let _ = navigationController?.popViewController(animated: true)
     }
     func startLoading() {
-        if isLoading { return }
-        
+        if self.indicatorView.isAnimating { return }
+        indicatorView.frame.size = CGSize(width: 100, height: 100)
+        indicatorView.center = self.view.center
+        indicatorView.color = UIColor.black
+        self.view.addSubview(indicatorView)
         navigationItem.leftBarButtonItem?.isEnabled = false
         navigationItem.rightBarButtonItem?.isEnabled = false
-        isLoading = true
-        hud?.show(in: self.view)
+        self.indicatorView.startAnimating()
     }
     
     func stopLoading() {
-        if !isLoading { return }
-        
+        if !self.indicatorView.isAnimating { return }
         navigationItem.leftBarButtonItem?.isEnabled = true
         navigationItem.rightBarButtonItem?.isEnabled = true
-        hud?.dismiss()
-        isLoading = false
+        self.indicatorView.stopAnimating()
+        self.indicatorView.removeFromSuperview()
     }
     
     func showMessage(title: String?, message: String, handler: ((UIAlertAction) -> Void)?) {

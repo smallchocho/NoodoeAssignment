@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
+//import Alamofire
+//import SwiftyJSON
 class NANetworkMannager{
     static let SERVER_URL = "https://watch-master-staging.herokuapp.com/api/"
     enum Catogory:String {
@@ -29,15 +29,15 @@ class NANetworkMannager{
     static let REST_API_KEY = ""
     static let TIMEOUT_FOR_REQUEST = 30.0
     static let TIMEOUT_FOR_RESOURCE = 60.0
-    static private let alamofireMannager:Alamofire.SessionManager = {
-        let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = TIMEOUT_FOR_REQUEST
-        configuration.timeoutIntervalForResource = TIMEOUT_FOR_RESOURCE
-        configuration.httpMaximumConnectionsPerHost = 20
-        return Alamofire.SessionManager(configuration: configuration)
-        } ()
+//    static private let alamofireMannager:Alamofire.SessionManager = {
+//        let configuration = URLSessionConfiguration.default
+//        configuration.timeoutIntervalForRequest = TIMEOUT_FOR_REQUEST
+//        configuration.timeoutIntervalForResource = TIMEOUT_FOR_RESOURCE
+//        configuration.httpMaximumConnectionsPerHost = 20
+//        return Alamofire.SessionManager(configuration: configuration)
+//        } ()
     static func request(method:HTTPMethod,catogory:Catogory,command:String?,parameters:[String:Any]?,reponseHandler:@escaping (Bool,Any)->()){
-        let url = SERVER_URL + catogory.rawValue + "/" + (command ?? "")
+        let urlString = SERVER_URL + catogory.rawValue + "/" + (command ?? "")
         var headers:[String:String] = [
             "Content-Type" : "application/json",
             "X-Parse-Application-Id": APPLICATION_ID,
@@ -46,22 +46,105 @@ class NANetworkMannager{
         if !SESSION_TOKEN.isEmpty {
             headers["X-Parse-Session-Token"] = SESSION_TOKEN
         }
-        
-        alamofireMannager.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { response in
-            switch response.result{
-            case .success(let value):
-                let json = JSON(value)
-                if let token = json["sessionToken"].string{
-                    SESSION_TOKEN = token
-                }
-                if let id = json["objectId"].string{
-                    USER_OBJECT_ID = id
-                }
-                reponseHandler(true,json)
-            case .failure(let error):
-                print(error.localizedDescription)
-                reponseHandler(false,error)
-            }
+        guard let url = URL(string: urlString) else{
+            let error = NSError()
+            DispatchQueue.main.async { reponseHandler(false,error) }
+            return
         }
+        var request = URLRequest(url: url)
+        request.timeoutInterval = TIMEOUT_FOR_REQUEST
+        request.httpMethod = method.rawValue
+        request.allHTTPHeaderFields = headers
+        if let parameters = parameters {
+            guard let data = try? JSONSerialization.data(withJSONObject: parameters, options: []) else{
+                let error = NSError()
+                DispatchQueue.main.async { reponseHandler(false,error) }
+                return
+            }
+            request.httpBody = data
+        }
+        let session = URLSession.shared.dataTask(with: request) { (data:Data?, response:URLResponse?, error:Error?) in
+            guard error == nil else{
+                DispatchQueue.main.async { reponseHandler(false,error!) }
+                return
+            }
+            guard let data = data else{
+                let error = NSError()
+                DispatchQueue.main.async { reponseHandler(false,error) }
+                return
+            }
+            guard let res = response as? HTTPURLResponse else{
+                let error = NSError()
+                DispatchQueue.main.async { reponseHandler(false,error) }
+                return
+            }
+            guard res.statusCode < 300 && res.statusCode >= 200 else{
+                print(res.statusCode)
+                print(res.allHeaderFields)
+                let error = NSError()
+                DispatchQueue.main.async { reponseHandler(false,error) }
+                return
+            }
+            guard let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) else{
+                let error = NSError()
+                DispatchQueue.main.async { reponseHandler(false,error) }
+                return
+            }
+            print(jsonData)
+            guard let json = jsonData as? [String:Any] else{
+                 let error = NSError()
+                 DispatchQueue.main.async { reponseHandler(false,error) }
+                 return
+            }
+            if let token = json["sessionToken"] as? String{
+                SESSION_TOKEN = token
+            }
+            if let id = json["objectId"] as? String{
+                USER_OBJECT_ID = id
+            }
+            DispatchQueue.main.async { reponseHandler(true,jsonData) }
+        }
+        session.resume()
     }
+    
+    
+    
+//    static func requestForAlamorfire(method:HTTPMethod,catogory:Catogory,command:String?,parameters:[String:Any]?,reponseHandler:@escaping (Bool,Any)->()){
+//        let url = SERVER_URL + catogory.rawValue + "/" + (command ?? "")
+//        var headers:[String:String] = [
+//            "Content-Type" : "application/json",
+//            "X-Parse-Application-Id": APPLICATION_ID,
+//            "X-Parse-REST-API-Key":REST_API_KEY
+//        ]
+//        if !SESSION_TOKEN.isEmpty {
+//            headers["X-Parse-Session-Token"] = SESSION_TOKEN
+//        }
+//        alamofireMannager.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { response in
+//            switch response.result{
+//            case .success(let value):
+//                let json = JSON(value)
+//                if let token = json["sessionToken"].string{
+//                    SESSION_TOKEN = token
+//                }
+//                if let id = json["objectId"].string{
+//                    USER_OBJECT_ID = id
+//                }
+//                reponseHandler(true,json)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//                reponseHandler(false,error)
+//            }
+//        }
+//    }
+}
+public enum HTTPMethod: String {
+    case options = "OPTIONS"
+    case get     = "GET"
+    case head    = "HEAD"
+    case post    = "POST"
+    case put     = "PUT"
+    case patch   = "PATCH"
+    case delete  = "DELETE"
+    case trace   = "TRACE"
+    case connect = "CONNECT"
 }

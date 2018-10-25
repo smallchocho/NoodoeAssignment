@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+//import SwiftyJSON
 class NAUserSettingPageViewController: NABaseViewController {
     var userProfile:NAUserProfile!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -51,7 +51,11 @@ class NAUserSettingPageViewController: NABaseViewController {
         stopLoading()
         switch isSuccess {
         case true:
-            guard let json = result as? JSON else{
+//            guard let json = result as? JSON else{
+//                assert(false)
+//                return
+//            }
+            guard let json = result as? [String:Any] else{
                 assert(false)
                 return
             }
@@ -63,7 +67,7 @@ class NAUserSettingPageViewController: NABaseViewController {
                 assert(false)
                 return
             }
-            print(error.localizedDescription)
+//            print(error.localizedDescription)
             let title = "失敗"
             showMessage(title: title, message: "資料修改失敗，請稍後再試", handler: nil)
         }

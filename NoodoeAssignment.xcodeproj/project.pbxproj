@@ -18,7 +18,6 @@
 		0898CD3E217F00BB00DBE800 /* NANetworkMannager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898CD3D217F00BB00DBE800 /* NANetworkMannager.swift */; };
 		0898CD40217F12CC00DBE800 /* NAUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898CD3F217F12CC00DBE800 /* NAUserProfile.swift */; };
 		0898CD42218052A500DBE800 /* NAUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898CD41218052A400DBE800 /* NAUserDefaultManager.swift */; };
-		0C7679EC21CC2ECBD1757E63 /* Pods_NoodoeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2745CF29FFDDD7EA433AF4C /* Pods_NoodoeAssignment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +34,6 @@
 		0898CD3D217F00BB00DBE800 /* NANetworkMannager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NANetworkMannager.swift; sourceTree = "<group>"; };
 		0898CD3F217F12CC00DBE800 /* NAUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAUserProfile.swift; sourceTree = "<group>"; };
 		0898CD41218052A400DBE800 /* NAUserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAUserDefaultManager.swift; sourceTree = "<group>"; };
-		154BA23BC4FAE40E09BB207B /* Pods-NoodoeAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoodoeAssignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NoodoeAssignment/Pods-NoodoeAssignment.debug.xcconfig"; sourceTree = "<group>"; };
-		C2745CF29FFDDD7EA433AF4C /* Pods_NoodoeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoodoeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D38318C4A04CADB0893F7F9B /* Pods-NoodoeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoodoeAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-NoodoeAssignment/Pods-NoodoeAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C7679EC21CC2ECBD1757E63 /* Pods_NoodoeAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +52,6 @@
 			children = (
 				0898CD23217EEF0900DBE800 /* NoodoeAssignment */,
 				0898CD22217EEF0900DBE800 /* Products */,
-				A3922D7F29A8B199BC4C00A4 /* Pods */,
-				7CA2A9732396AB15D32DD94A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,23 +98,6 @@
 			path = LocalStorage;
 			sourceTree = "<group>";
 		};
-		7CA2A9732396AB15D32DD94A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C2745CF29FFDDD7EA433AF4C /* Pods_NoodoeAssignment.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A3922D7F29A8B199BC4C00A4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				154BA23BC4FAE40E09BB207B /* Pods-NoodoeAssignment.debug.xcconfig */,
-				D38318C4A04CADB0893F7F9B /* Pods-NoodoeAssignment.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,11 +105,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0898CD33217EEF0B00DBE800 /* Build configuration list for PBXNativeTarget "NoodoeAssignment" */;
 			buildPhases = (
-				9A924C12F65D8A93FFF7288B /* [CP] Check Pods Manifest.lock */,
 				0898CD1D217EEF0900DBE800 /* Sources */,
 				0898CD1E217EEF0900DBE800 /* Frameworks */,
 				0898CD1F217EEF0900DBE800 /* Resources */,
-				AB83679DAA4480946D94B5BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,57 +164,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		9A924C12F65D8A93FFF7288B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NoodoeAssignment-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB83679DAA4480946D94B5BC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NoodoeAssignment/Pods-NoodoeAssignment-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NoodoeAssignment/Pods-NoodoeAssignment-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0898CD1D217EEF0900DBE800 /* Sources */ = {
@@ -397,7 +320,6 @@
 		};
 		0898CD34217EEF0B00DBE800 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 154BA23BC4FAE40E09BB207B /* Pods-NoodoeAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -416,7 +338,6 @@
 		};
 		0898CD35217EEF0B00DBE800 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D38318C4A04CADB0893F7F9B /* Pods-NoodoeAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
