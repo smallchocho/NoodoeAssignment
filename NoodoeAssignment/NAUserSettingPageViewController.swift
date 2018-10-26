@@ -63,11 +63,11 @@ class NAUserSettingPageViewController: NABaseViewController {
             let title = "成功"
             showMessage(title: title, message: "資料已修改成功", handler: nil)
         case false:
-            guard let error = result as? Error else{
+            guard let error = result as? NAError else{
                 assert(false)
                 return
             }
-//            print(error.localizedDescription)
+            print(error.localizedDescription)
             let title = "失敗"
             showMessage(title: title, message: "資料修改失敗，請稍後再試", handler: nil)
         }

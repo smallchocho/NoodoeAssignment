@@ -37,6 +37,7 @@ class NANetworkMannager{
 //        return Alamofire.SessionManager(configuration: configuration)
 //        } ()
     static func request(method:HTTPMethod,catogory:Catogory,command:String?,parameters:[String:Any]?,reponseHandler:@escaping (Bool,Any)->()){
+        let error = NAError(description: "data can't trainform to json")
         let urlString = SERVER_URL + catogory.rawValue + "/" + (command ?? "")
         var headers:[String:String] = [
             "Content-Type" : "application/json",
@@ -47,7 +48,7 @@ class NANetworkMannager{
             headers["X-Parse-Session-Token"] = SESSION_TOKEN
         }
         guard let url = URL(string: urlString) else{
-            let error = NSError()
+            let error = NAError(description: "url is unformatted")
             DispatchQueue.main.async { reponseHandler(false,error) }
             return
         }
@@ -57,7 +58,7 @@ class NANetworkMannager{
         request.allHTTPHeaderFields = headers
         if let parameters = parameters {
             guard let data = try? JSONSerialization.data(withJSONObject: parameters, options: []) else{
-                let error = NSError()
+                let error = NAError(description: "body is unformatted")
                 DispatchQueue.main.async { reponseHandler(false,error) }
                 return
             }
@@ -68,31 +69,31 @@ class NANetworkMannager{
                 DispatchQueue.main.async { reponseHandler(false,error!) }
                 return
             }
-            guard let data = data else{
-                let error = NSError()
-                DispatchQueue.main.async { reponseHandler(false,error) }
-                return
-            }
             guard let res = response as? HTTPURLResponse else{
-                let error = NSError()
+                let error = NAError(description: "response is nil")
                 DispatchQueue.main.async { reponseHandler(false,error) }
                 return
             }
             guard res.statusCode < 300 && res.statusCode >= 200 else{
                 print(res.statusCode)
                 print(res.allHeaderFields)
-                let error = NSError()
+                let error = NAError(description: "statuscode is \(res.statusCode)")
+                DispatchQueue.main.async { reponseHandler(false,error) }
+                return
+            }
+            guard let data = data else{
+                let error = NAError(description: "data is nil")
                 DispatchQueue.main.async { reponseHandler(false,error) }
                 return
             }
             guard let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) else{
-                let error = NSError()
+                let error = NAError(description: "data can't trainform to json")
                 DispatchQueue.main.async { reponseHandler(false,error) }
                 return
             }
             print(jsonData)
             guard let json = jsonData as? [String:Any] else{
-                 let error = NSError()
+                 let error = NAError(description: "data can't trainform to json")
                  DispatchQueue.main.async { reponseHandler(false,error) }
                  return
             }
@@ -147,4 +148,15 @@ public enum HTTPMethod: String {
     case delete  = "DELETE"
     case trace   = "TRACE"
     case connect = "CONNECT"
+}
+
+protocol NAErrorProtocol:Error {
+    var description:String{get}
+}
+
+struct NAError:NAErrorProtocol{
+    let description: String
+    init(description:String) {
+        self.description = description
+    }
 }

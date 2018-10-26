@@ -53,7 +53,7 @@ class NALoginViewController: NABaseViewController {
             print(userProfile)
             self.goToUserSettingViewController(profile: userProfile)
         case false:
-            guard let error = result as? Error else{
+            guard let error = result as? NAError else{
                 assert(false)
                 return
             }
